@@ -1,0 +1,849 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+
+body {
+    background-color: #101820FF !important;
+}
+
+.navbar-light {
+    background-color: red;
+}
+
+.nav-link {
+    color: black !important;
+    font-weight: bolder !important;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive !important;
+    width: 160px !important;
+    margin-left: 90px !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+.navbar-brand {
+    font-size: 32px !important;
+    color: rgb(0, 0, 0) !important;
+    font-weight: bolder;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.btn {
+    background-color: rgb(48, 45, 45) !important;
+    color: red !important;
+    font-weight: bolder !important;
+}
+
+.btn:hover {
+    background-color: rgb(196, 183, 183) !important;
+}
+
+.navbar-nav button {
+    margin-left: 10px !important;
+}
+
+.carousel-item img {
+    height: 657px !important;
+    width: 100% !important;
+}
+
+/* Bootstrap Ends */
+/* Movies Starts */
+.movies-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-head h2 {
+    color: red;
+    font-size: 55px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.movies-line {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.movies-first,
+.movies-second,
+.movies-third,
+.movies-fourth {
+    height: 450px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    /* border: 1px solid green; */
+}
+
+.movie-first-back {
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid rgb(19, 0, 128); */
+    background-image: url(./images/movies/batman.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.movie-second-back {
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid rgb(19, 0, 128); */
+    background-image: url(./images/movies/black-crab.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.movie-third-back {
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid rgb(19, 0, 128); */
+    background-image: url(./images/movies/me_time.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.movie-fourth-back {
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid rgb(19, 0, 128); */
+    background-image: url(./images/movies/navalany.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.movies-first .movie-first-back button {
+    transform: translateY(-150px);
+    opacity: 0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-second .movie-second-back button {
+    transform: translateY(-150px);
+    opacity: 0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-third .movie-third-back button {
+    transform: translateY(-150px);
+    opacity: 0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-fourth .movie-fourth-back button {
+    transform: translateY(-150px);
+    opacity: 0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Not Working */
+/* .movie-first-back:hover  .movie-first-back button{
+    transform: translateY(1px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+} */
+.movies-first:hover .movie-first-back button {
+    transform: translateY(1px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.movies-second:hover .movie-second-back button {
+    transform: translateY(1px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.movies-third:hover .movie-third-back button {
+    transform: translateY(1px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.movies-fourth:hover .movie-fourth-back button {
+    transform: translateY(1px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.movie-first-back:hover {
+    transition: all 1.2s ease-in-out;
+    background-image: none;
+    background-color: rgb(65, 12, 12);
+}
+
+.movie-second-back:hover {
+    transition: all 1.2s ease-in-out;
+    background-image: none;
+    background-color: rgb(21, 16, 61);
+}
+
+.movie-third-back:hover {
+    transition: all 1.2s ease-in-out;
+    background-image: none;
+    background-color: rgb(153, 127, 12);
+}
+
+.movie-fourth-back:hover {
+    transition: all 1.2s ease-in-out;
+    background-image: none;
+    background-color: rgb(114, 113, 110);
+}
+
+.movies-first h2,
+.movies-second h2,
+.movies-third h2,
+.movies-fourth h2 {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+.movies,
+.shows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-trailer,
+.show-trailer {
+    height: 400px;
+    width: 600px;
+    background-color: rgb(182, 192, 192);
+}
+
+.movie-trailer-close,
+.show-trailer-close {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#batmanSeatsButton,
+#crabSeatsButton,
+#meSeatsButton,
+#navalSeatsButton {
+    width: 160px;
+    height: 45px;
+    background-color: #ff0000;
+    color: white;
+}
+
+.batman-seats,
+.crab-seats,
+.me-seats,
+.naval-seats {
+    height: 450px;
+    width: 600px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    margin-top: 100px;
+}
+
+.batman-line1,
+.batman-line2,
+.batman-line3,
+.crab-line1,
+.crab-line2,
+.crab-line3,
+.me-line1,
+.me-line2,
+.me-line3,
+.naval-line1,
+.naval-line2,
+.naval-line3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.batman-line4,
+.crab-line4,
+.me-line4,
+.naval-line4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.batman-line4 button,
+.crab-line4 button,
+.me-line4 button,
+.naval-line4 button {
+    height: 40px;
+    width: 300px;
+    margin-top: 20px;
+    color: white;
+    background-color: red;
+}
+
+/* Movies End */
+.show-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-head h2 {
+    color: red;
+    font-size: 55px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.shows-line {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.shows-first,
+.shows-second,
+.shows-third,
+.shows-fourth {
+    height: 450px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    /* border: 1px solid green; */
+}
+
+.shows-first-back {
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid rgb(19, 0, 128); */
+    background-image: url(./images/show/all\ of\ us.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.shows-second-back {
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid rgb(19, 0, 128); */
+    background-image: url(./images/show/business\ proposal.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.shows-third-back {
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid rgb(19, 0, 128); */
+    background-image: url(./images/show/Guilty_Minds_Poster.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.shows-fourth-back {
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid rgb(19, 0, 128); */
+    background-image: url(./images/show/the\ lord\ of\ ring.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.shows-first-back button,
+.shows-second-back button,
+.shows-third-back button,
+.shows-fourth-back button {
+    transform: translateY(-150px);
+    opacity: 0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shows-first:hover .shows-first-back button {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.shows-second:hover .shows-second-back button {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.shows-third:hover .shows-third-back button {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.shows-fourth:hover .shows-fourth-back button {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.shows-first-back:hover {
+    transition: all 1.2s ease-in-out;
+    background-image: none;
+    background-color: rgb(53, 121, 44);
+}
+
+.shows-second-back:hover {
+    transition: all 1.2s ease-in-out;
+    background-image: none;
+    background-color: rgb(209, 182, 30);
+}
+
+.shows-third-back:hover {
+    transition: all 1.2s ease-in-out;
+    background-image: none;
+    background-color: rgb(143, 142, 138);
+}
+
+.shows-fourth-back:hover {
+    transition: all 1.2s ease-in-out;
+    background-image: none;
+    background-color: rgb(88, 75, 21);
+}
+
+.shows-first h2,
+.shows-second h2,
+.shows-third h2,
+.shows-fourth h2 {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+#deadSeatsButton,
+#businessSeatsButton,
+#guiltySeatsButton,
+#kingSeatsButton {
+    width: 160px;
+    height: 45px;
+    background-color: #ff0000;
+    color: white;
+}
+
+.dead-seats,
+.business-seats,
+.guilty-seats,
+.king-seats {
+    height: 450px;
+    width: 600px;
+    background-color: aliceblue;
+    border-radius: 8px;
+}
+
+.dead-line1,
+.dead-line2,
+.dead-line3,
+.business-line1,
+.business-line2,
+.business-line3,
+.guilty-line1,
+.guilty-line2,
+.guilty-line3,
+.king-line1,
+.king-line2,
+.king-line3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.dead-line4,
+.business-line4,
+.guilty-line4,
+.king-line4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dead-line4 button,
+.business-line4 button,
+.guilty-line4 button,
+.king-line4 button {
+    height: 40px;
+    width: 300px;
+    margin-top: 20px;
+    color: white;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.booking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.booking h2 {
+    color: red;
+    font-size: 55px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.booking button {
+    width: 600px;
+    height: 60px;
+    font-size: 35px;
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-family: 'Rubik', sans-serif;
+}
+
+.seats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 15px;
+}
+
+.close-seat-info {
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin-left: 440px;
+    margin-bottom: 20px;
+}
+
+.close-seat-info img {
+    float: right !important;
+    cursor: pointer;
+}
+
+.seats-info {
+    /* margin-bottom: 30px; */
+    height: 550px;
+    width: 550px;
+    background-color: rgb(255, 252, 252);
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.seats-line1,
+.seats-line2,
+.seats-line3,
+.seats-line4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seats-line1 img,
+.seats-line2 img,
+.seats-line3 img,
+.seats-line4 img {
+    height: 90px;
+    width: 90px;
+    /* cursor: pointer; */
+}
+
+.seats-line5 button {
+    width: 450px;
+    height: 40px;
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+
+}
+
+.notSelected {
+    filter: invert(0%) sepia(96%) saturate(16%) hue-rotate(246deg) brightness(98%) contrast(105%);
+    cursor: pointer;
+}
+
+.selected {
+    filter: invert(14%) sepia(71%) saturate(7149%) hue-rotate(357deg) brightness(93%) contrast(117%);
+    cursor: pointer;
+
+}
+
+.confirmSelected {
+    filter: invert(14%) sepia(71%) saturate(7149%) hue-rotate(357deg) brightness(93%) contrast(117%);
+    cursor: not-allowed;
+}
+
+.container2 {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./images/con2back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup {
+    height: 450px;
+    width: 450px;
+    background-color: rgb(10, 13, 31);
+    border-radius: 12px;
+}
+
+.signup-content form {
+    height: 450px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.name,
+.email,
+.password,
+.confirm-password,
+.number {
+    height: 40px;
+    width: 300px;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.name input,
+.email input,
+.password input,
+.confirm-password input,
+.number input {
+    height: 38px;
+    width: 250px;
+    outline: none;
+    border: 2px solid rgb(66, 70, 66);
+    border-radius: 5px;
+    /* border-radius: 5px; */
+
+}
+
+.name-icon,
+.email-icon,
+.pass-icon,
+.Cpass-icon,
+.number-icon {
+    height: 38px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid rgb(66, 70, 66);
+
+}
+
+input[type="submit"] {
+    width: 300px;
+    height: 55px;
+    background-color: red;
+    color: aliceblue;
+    font-size: 30px;
+}
+
+.signin {
+    height: 400px;
+    width: 450px;
+    background-color: rgb(10, 13, 31);
+    border-radius: 12px;
+}
+
+.signin-content form {
+    height: 400px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.signin-email,
+.signin-password,
+.login-submit {
+    height: 40px;
+    width: 400px;
+    display: flex;
+}
+
+.signin-error {
+    background-color: white;
+    border-radius: 8px;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.signin-error h2 {
+    color: red;
+    font-size: 22px;
+}
+
+.signin-email input,
+.signin-password input {
+    height: 38px;
+    width: 250px;
+    outline: none;
+    border: 2px solid rgb(66, 70, 66);
+    border-radius: 5px;
+    /* border-radius: 5px; */
+}
+
+.signin-email-icon,
+.signin-password-icon {
+    height: 38px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid rgb(66, 70, 66);
+
+}
+
+.signup-line {
+    margin-right: 90px;
+    font-size: 2px;
+}
+
+.signup-line h3,
+span {
+    font-size: 26px;
+
+}
+
+iframe {
+    width: 600px;
+    height: 300px;
+}
+
+
+
+
+@media screen and (min-width:200px) and (max-width: 500px) {
+
+    .movies-line,
+    .shows-line {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .movie-trailer {
+        width: 250px;
+        height: 300px;
+    }
+
+    iframe {
+        width: 260px;
+        height: 350px;
+    }
+
+    .movie-trailer,
+    .show-trailer {
+        height: 360px;
+        width: 260px;
+        background-color: rgb(182, 192, 192);
+    }
+}

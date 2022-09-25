@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+
+    <div class="main-container">
+        <nav class="navbar navbar-expand-lg navbar-light  fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Cinema</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#moviesLink">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#showLinks">Shows</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <button class="btn" onClick="logOut()">Log Out</button>
+                        <br>
+                        <button class="btn" onClick="signOut()">Sign Out</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Slider -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/slider/batman.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slider/top-gun.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slider/the patient.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slider/vikings.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <br id="moviesLink">
+        <br>
+        <br>
+
+        <!-- Movie Strats -->
+        <div class="main-container2">
+            <div class="movies">
+                <div class="movie-content">
+                    <div class="movies-head">
+                        <h2>Movies</h2>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="movies-line">
+                        
+                        <div class="movies-first">
+                            <div class="movie-first-back">
+                                <button onClick="showMoviewTrailer('bat')"><img src="./icons/play-button.png"
+                                        style="height: 40px; width: 40px;"></button>
+                            </div>
+                            <h2>The Batman</h2>
+                            <button id="batmanSeatsButton">Book Seats Now</button>
+
+                        </div>
+                        <div class="movies-second">
+                            <div class="movie-second-back">
+                                <button onClick="showMoviewTrailer('crab')"><img src="./icons/play-button.png"
+                                        style="height: 40px; width: 40px;"></button>
+                            </div>
+                            <h2>Black Crab</h2>
+                            <button id="crabSeatsButton">Book Seats Now</button>
+                        </div>
+                        <div class="movies-third">
+                            <div class="movie-third-back">
+                                <button onClick="showMoviewTrailer('me')"><img src="./icons/play-button.png"
+                                        style="height: 40px; width: 40px;"></button>
+                            </div>
+                            <h2>Me Time</h2>
+                            <button id="meSeatsButton">Book Seats Now</button>
+                        </div>
+                        <div class="movies-fourth">
+                            <div class="movie-fourth-back">
+                                <button onClick="showMoviewTrailer('naval')"><img src="./icons/play-button.png"
+                                        style="height: 40px; width: 40px;"></button>
+                            </div>
+                            <h2>Navalny</h2>
+                            <button id="navalSeatsButton">Book Seats Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-trailer">
+                    <div class="movie-trailer-close">
+                        <button onClick="closeMovieTrailer()">X</button>
+                    </div>
+                    <iframe id="movie-trailer-show" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="batman-seats">
+                    <div class="batman-line1">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b1">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b2">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b3">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b4">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b5">
+                    </div>
+                    <br>
+                    <div class="batman-line2">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b6">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b7">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b8">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b9">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b10">
+                    </div>
+                    <br>
+                    <div class="batman-line3">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b11">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b12">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b13">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b14">
+                        <img src="./icons/chair.png" onClick="selectingBatmanSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="b15">
+                    </div>
+                    <div class="batman-line4">
+                        <button onClick="confirmBatmanSeats()">Confirm Booking</button>
+                    </div>
+                </div>
+                <div class="crab-seats">
+                    <div class="crab-line1">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c1">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c2">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c3">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c4">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c5">
+                    </div>
+                    <br>
+                    <div class="crab-line2">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c6">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c7">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c8">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c9">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c10">
+                    </div>
+                    <br>
+                    <div class="crab-line3">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c11">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c12">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c13">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c14">
+                        <img src="./icons/chair.png" onClick="selectingCrabSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="c15">
+                    </div>
+                    <div class="crab-line4">
+                        <button onClick="confirmCrabSeats()">Confirm Booking</button>
+                    </div>
+                </div>
+
+                <div class="me-seats">
+                    <div class="me-line1">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m1">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m2">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m3">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m4">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m5">
+                    </div>
+                    <br>
+                    <div class="me-line2">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m6">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m7">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m8">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m9">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m10">
+                    </div>
+                    <br>
+                    <div class="me-line3">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m11">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m12">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m13">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m14">
+                        <img src="./icons/chair.png" onClick="selectingMeSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="m15">
+                    </div>
+                    <div class="me-line4">
+                        <button onClick="confirmMeSeats()">Confirm Booking</button>
+                    </div>
+                </div>
+
+                <div class="naval-seats">
+                    <div class="naval-line1">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n1">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n2">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n3">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n4">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n5">
+                    </div>
+                    <br>
+                    <div class="naval-line2">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n6">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n7">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n8">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n9">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n10">
+                    </div>
+                    <br>
+                    <div class="naval-line3">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n11">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n12">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n13">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n14">
+                        <img src="./icons/chair.png" onClick="selectingNavalSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="n15">
+                    </div>
+                    <div class="naval-line4">
+                        <button onClick="confirmNavalSeats()">Confirm Booking</button>
+                    </div>
+                </div>
+            </div>
+            <br id="showLinks">
+            <br>
+            <br>
+            <!-- Movie Ends -->
+            <div class="shows">
+                <div class="show-content">
+                    <div class="show-head">
+                        <h2>Shows</h2>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="shows-line">
+                        <div class="shows-first">
+                            <div class="shows-first-back">
+                                <button onClick="showingShowTrailer('dead')"><img src="./icons/play-button.png"
+                                        style="height: 40px; width: 40px;"></button>
+                            </div>
+                            <h2>All Of Us Are Dead</h2>
+                            <button id="deadSeatsButton">Book Seats now</button>
+                        </div>
+                        <div class="shows-second">
+                            <div class="shows-second-back">
+                                <button onClick="showingShowTrailer('business')"><img src="./icons/play-button.png"
+                                        style="height: 40px; width: 40px;"></button>
+                            </div>
+                            <h2>Business Proposal</h2>
+                            <button id="businessSeatsButton">Book Seats now</button>
+                        </div>
+                        <div class="shows-third">
+                            <div class="shows-third-back">
+                                <button onClick="showingShowTrailer('mind')"><img src="./icons/play-button.png"
+                                        style="height: 40px; width: 40px;"></button>
+                            </div>
+                            <h2>Guilty Minds</h2>
+                            <button id="guiltySeatsButton">Book Seats now</button>
+                        </div>
+                        <div class="shows-fourth">
+                            <div class="shows-fourth-back">
+                                <button onClick="showingShowTrailer('ring')"><img src="./icons/play-button.png"
+                                        style="height: 40px; width: 40px;"></button>
+                            </div>
+                            <h2>The Lord Of Rings</h2>
+                            <button id="kingSeatsButton">Book Seats now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-trailer">
+                    <div class="show-trailer-close">
+                        <button onClick="closeShowTrailer()">X</button>
+                    </div>
+                    <iframe id="show-trailer-show" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="business-seats">
+                    <div class="business-line1">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu1">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu2">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu3">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu4">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu5">
+                    </div>
+                    <br>
+                    <div class="business-line2">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu6">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu7">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu8">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu9">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu10">
+                    </div>
+                    <br>
+                    <div class="business-line3">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu11">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu12">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu13">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu14">
+                        <img src="./icons/chair.png" onClick="selectingBusinessSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="bu15">
+                    </div>
+                    <div class="business-line4">
+                        <button onClick="confirmBusinessSeats()">Confirm Booking</button>
+                    </div>
+                </div>
+                <div class="dead-seats">
+                    <div class="dead-line1">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d1">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d2">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d3">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d4">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d5">
+                    </div>
+                    <br>
+                    <div class="dead-line2">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d6">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d7">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d8">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d9">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d10">
+                    </div>
+                    <br>
+                    <div class="dead-line3">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d11">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d12">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d13">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d14">
+                        <img src="./icons/chair.png" onClick="selectingDeadSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="d15">
+                    </div>
+                    <div class="dead-line4">
+                        <button onClick="confirmDeadSeats()">Confirm Booking</button>
+                    </div>
+                </div>
+                <div class="guilty-seats">
+                    <div class="guilty-line1">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu1">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu2">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu3">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu4">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu5">
+                    </div>
+                    <br>
+                    <div class="guilty-line2">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu6">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu7">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu8">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu9">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu10">
+                    </div>
+                    <br>
+                    <div class="guilty-line3">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu11">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu12">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu13">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu14">
+                        <img src="./icons/chair.png" onClick="selectingGuiltySeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="gu15">
+                    </div>
+                    <div class="guilty-line4">
+                        <button onClick="confirmGuiltySeats()">Confirm Booking</button>
+                    </div>
+                </div>
+                <div class="king-seats">
+                    <div class="king-line1">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k1">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k2">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k3">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k4">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k5">
+                    </div>
+                    <br>
+                    <div class="king-line2">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k6">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k7">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k8">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k9">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k10">
+                    </div>
+                    <br>
+                    <div class="king-line3">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k11">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k12">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k13">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k14">
+                        <img src="./icons/chair.png" onClick="selectingKingSeat(this.id)"
+                            style="height: 95px; width: 95px; cursor: pointer;" id="k15">
+                    </div>
+                    <div class="king-line4">
+                        <button onClick="confirmKingSeats()">Confirm Booking</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+
+    </div>
+    <div class="container2">
+        <div class="signup">
+            <div class="signup-content">
+                <form onSubmit="signUpCheck(event)">
+                    <div class="name">
+                        <div class="name-icon">
+                            <img src="./icons/user.png">
+                        </div>
+                        <input type="text" placeholder="Enter Your Full Name" id="signupName" minlength="5"
+                            maxlength="50">
+                    </div>
+                    <div class="email">
+                        <div class="email-icon">
+                            <img src="./icons/email.png">
+                        </div>
+                        <input type="email" placeholder="Enter Your Email" id="signupEmail">
+                    </div>
+                    <div class="password">
+                        <div class="pass-icon">
+                            <img src="./icons/padlock.png">
+                        </div>
+                        <input type="password" placeholder="Enter Your Password" id="signupPass" minlength="5"
+                            maxlength="9">
+                    </div>
+                    <div class="confirm-password">
+                        <div class="Cpass-icon">
+                            <img src="./icons/padlock.png">
+                        </div>
+                        <input type="password" placeholder="Confrim Password" id="signupCPass" minlength="5"
+                            maxlength="9">
+                    </div>
+                    <div class="number">
+                        <div class="number-icon">
+                            <img src="./icons/telephone-handle-silhouette.png">
+                        </div>
+                        <input type="tel" placeholder="Enter Your Mob. Number" id="signupNumber" maxlength="11">
+                    </div>
+                    <div class="login-line">
+                        <h3 style="color: white;">Alredy Have An Account? <br> <span
+                                style="color: red; cursor: pointer;" onClick="logOut()">Sign In</span></h3>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="I'm in!">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="signin">
+            <div class="signin-content">
+                <form onSubmit="checkSignIn(event)">
+                    <div class="signin-error">
+                        <h2>Incorrect Email OR Password</h2>
+                    </div>
+                    <div class="signin-email">
+                        <div class="signin-email-icon">
+                            <img src="./icons/email.png">
+                        </div>
+                        <input type="email" placeholder="Email" id="signInEmail">
+                    </div>
+                    <div class="signin-password">
+                        <div class="signin-password-icon">
+                            <img src="./icons/padlock.png">
+                        </div>
+                        <input type="password" placeholder="Password" id="signInPassword" maxlength="9">
+                    </div>
+                    <div class="signup-line">
+                        <h3 style="color: white;">Don't Have An Account? <br> <span style="color: red; cursor: pointer;"
+                                onClick="showsignUp()">SignUp</span></h3>
+                    </div>
+                    <div class="login-submit">
+                        <input type="submit" value="Welcome Again!">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
